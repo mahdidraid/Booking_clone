@@ -1,0 +1,114 @@
+.headr{
+    height: 250px;
+    background-color: #003580;
+    color: white;
+    justify-content: center;
+    
+}
+ .headrlist{
+    display: flex;
+    gap: 20px;
+
+    
+} 
+.headercontenar{
+        width: 100%;
+        width: 1024px;
+        margin: 0px auto;
+}
+
+.headrlist{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+.headrlist .active{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+.headrItem{
+    color: white;
+    font-weight: 300;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+
+} 
+
+.description{
+    margin-top: 20px;
+}
+
+.btnbotm{
+    background-color: #0071c2;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-weight: 500;
+    border-radius: 10px;
+
+}
+.headerSearch{
+    height: 30px;
+    display: flex;
+    border: 6px solid;
+    border-color:red ;
+    background-color: red;
+    
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    margin-top: 26px;
+    
+}
+
+.headerSearchItme{
+
+    border: 2px solid red;
+    background-color: white;
+    padding: 13px;
+    display: block;
+    width: 310px;
+    height: 30px;
+    
+  border-radius: 10px;
+    color: black;
+
+}
+
+
+.headerInputseacrh{
+ margin: auto 10px;
+
+ 
+}
+
+.bed{
+   margin: auto 10px;
+   font-size: 20px;
+   
+}
+
+.daysinput{
+    margin: auto 10px;
+}
+
+.days{
+    margin: auto 10px;
+    font-size: 20px;
+}
+.inputsearch{
+    width: 150px;
+    height: 55px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0071c2;
+    color: white;
+    font-weight: 600;
+  
+}
