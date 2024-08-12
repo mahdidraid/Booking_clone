@@ -92,34 +92,45 @@ export default function Header() {
             </div>
             <div className="headerSearchItme">
             <FontAwesomeIcon icon={faUser} className='days' />
-            <span className='daysinput'>{`${option.adult} adult . ${option.children} children . ${option.room} room`}
-                <div className="option">
-                  <div className="optionItem">
-                    <span className="optionText">Adult</span>
-                    <div className='allcon'>
-                        <button  className='optionCount' onClick={()=>handlOptionchnge("adult" ,"d")}>-</button>
-                        <span className='Number'>1</span>
-                        <button  className='optionCount' onClick={()=> handlOptionchnge("adult","i")}>+</button>
-                    </div>
-                  </div>
-                  <div className="optionItem">
-                  <span className="optionText">Children</span>
-                  <div className='allcon'>
-                    <button  className='optionCount' onClick={()=>handlOptionchnge("children","d") }>-</button>
-                    <span className='Number'>0</span>
-                    <button  className='optionCount' onClick={()=> handlOptionchnge("children","i")}>+</button>
-                    </div>
-                  </div>
-                  <div className="optionItem">
-                  <span className="optionText">Room</span>
-                  <div className='allcon'>
-                    <button  className='optionCount' onClick={()=> handlOptionchnge("room","d")}>-</button>
-                    <span className='Number'>1</span>
-                    <button  className='optionCount' onClick={()=> handlOptionchnge("room","i")}>+</button>
-                  </div>
-                  </div>
-                </div>
-            </span>
+            <span  onClick={() => setOpenOption(!openOption)} className='daysinput'>{`${option.adult} adult . ${option.children} children . ${option.room} room`}</span>
+               {openOption &&  <div className="option">
+                      <div className="optionItem">
+                        <span className="optionText">Adult</span>
+                        <div className='allcon'>
+                            <button  disabled={option.adult <= 1} className='optionCount' onClick={()=>handlOptionchnge("adult" ,"d")}>-</button>
+                            <span className='Number'>{option.adult}</span>
+                            <button  className='optionCount' onClick={()=> handlOptionchnge("adult","i")}>+</button>
+                        </div>
+                      </div>
+                      <div className="optionItem">
+                      <span className="optionText">Children</span>
+                      <div className='allcon'>
+                        <button  disabled={option.children <= 0} className='optionCount' onClick={()=>handlOptionchnge("children","d") }>-</button>
+                        <span className='Number'>{option.children}</span>
+                        <button  className='optionCount' onClick={()=> handlOptionchnge("children","i")}>+</button>
+                        </div>
+                      </div>
+                      <div className="optionItem">
+                      <span className="optionText">Room</span>
+                      <div className='allcon'>
+                        <button  disabled={option.room <= 1} className='optionCount' onClick={()=> handlOptionchnge("room","d")}>-</button>
+                        <span className='Number'>{option.room}</span>
+                        <button  className='optionCount' onClick={()=> handlOptionchnge("room","i")}>+</button>
+                      </div>
+                      </div>
+                      <hr className="solid"></hr>
+                      <div className='animal'>
+                        <p>Traveling with pets?</p>
+                        <label className="switch">
+                          <input type="checkbox"/>
+                          <span className="slider round"></span>
+                        </label>
+                      </div>
+                      <div className='box'>
+                        <p>Done</p>
+                      </div>
+                  </div>}
+            
             </div>
             <button className='inputsearch'>Search</button>
             </div>
